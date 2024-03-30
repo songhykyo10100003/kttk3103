@@ -1,0 +1,266 @@
+<!--bài1-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review Section</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #5644df;
+        box-sizing: border-box;
+    }i
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #ec6d78;
+        color: #f9f8f8;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .review {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .review p {
+        margin: 0;
+    }
+</style>
+</head>   
+<body>
+
+<div class="container">
+    <h1>Đánh Giá</h1>
+    <form id="reviewForm">
+        <input type="text" id="name" placeholder="Họ Và Tên" required><br>
+        <textarea id="content" placeholder="Nhập Đánh Giá" rows="4" required></textarea><br>
+        <input type="text" id="time" placeholder="Thời Gian" readonly><br>
+        <button type="submit">Gửi Đánh Giá</button>
+    </form>
+    <div id="reviews"></div>
+</div>
+
+<script>
+    document.getElementById("reviewForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        var name = document.getElementById("name").value;
+        var content = document.getElementById("content").value;
+        var time = getCurrentTime();
+
+        var reviewDiv = document.createElement("div");
+        reviewDiv.classList.add("review");
+        reviewDiv.innerHTML = "<p><strong>" + name + ": </strong>" + content + "<br><small>Time: " + time + "</small></p>";
+
+        document.getElementById("reviews").appendChild(reviewDiv);
+
+        // Clear input fields
+        document.getElementById("name").value = "";
+        document.getElementById("content").value = "";
+        document.getElementById("time").value = getCurrentTime();
+    });
+
+    function getCurrentTime() {
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+
+        // Add leading zero if single digit
+        hours = (hours < 10 ? "0" : "") + hours;
+        minutes = (minutes < 10 ? "0" : "") + minutes;
+        seconds = (seconds < 10 ? "0" : "") + seconds;
+
+        var timeString = hours + ":" + minutes + ":" + seconds;
+        return timeString;
+    }
+</script>
+
+</body>
+</html>
+
+<!--bài 2 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/wedtoan/bt/style1.css">
+    <title>Hello World!</title>
+
+   <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+
+    </main>
+    <footer class="footer">
+      <div class="letf-area">
+      <h2>contact</h2>
+      <ul class="box">
+         <li>577 Nguyễn thái Sơn </li>
+         <li>phường 5, Gò Vấp </li>
+         <li>thành phố Hồ Chí Minh</li>
+         <li>phanthuw1310@gmail.com</li>
+         <li> 0383574723</li>
+      </ul>
+            </div>
+<ul class="right-area">
+  <li class="link-area">
+  <h2>
+    Liên kết hữu ích</h2>
+    <ul class="box h-box">
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Tickets</a></li>
+      <li><a href="#">Policy</a></li>
+      <li><a href="#">Terms</a></li>
+
+      </ul>
+  </li>
+  <li>
+    <h2> Bài đăng gần đây</h2>
+    <ul>
+      <div class="box">
+      <li><a href="#"> Món chay</a></li>
+      <li><a href="#"> Món mặn</a></li>
+      <li><a href="#"> Thức uống</a></li>
+      <li><a href="#"> Món ăn vặt </a></li>
+      <li><a href="#"> Món ăn sáng</a></li>
+      <li><a href="#"> Món ăn cho bé </a></li>
+    </ul>
+  </li>
+  
+  <li>
+    <h2>Bản tin</h2>
+    <form action="" class="form-search">
+          <div class="search-box">
+            <input type="text" name="" id="">
+            <button class="btn" type="submit">Search</button>
+      </div>
+    </form>
+  </li>
+      </ul>
+      <div class="footer-bottom">
+        <img src="/wedtoan/bt/logo.png" alt="">
+        <p> All Right recived by & copy; creativo 2024</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+<!--bài 3-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị giờ hiện hành</title>
+    <style>
+        /* CSS để căn giữa nội dung */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hiển thị giờ, phút, giây và AM/PM -->
+    <div id="clock"></div>
+
+    <script>
+        // Hàm để định dạng giờ theo định dạng 12 giờ AM/PM
+        function formatAMPM(date) {
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12; // Giờ 0 sẽ là 12 giờ
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            var strTime = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+            return strTime;
+        }
+
+        // Lấy thời gian hiện tại
+        var currentTime = new Date();
+
+        // Hiển thị giờ, phút, giây và AM/PM
+        document.getElementById('clock').innerHTML = formatAMPM(currentTime);
+
+        // Cập nhật thời gian mỗi giây
+        setInterval(function() {
+            currentTime = new Date();
+            document.getElementById('clock').innerHTML = formatAMPM(currentTime);
+        }, 1000);
+    </script>
+</body>
+</html>
+<!--bài 4-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="name">Bài 6</div>
+<div class="bai6">
+    <div class="bai6-container">
+        <h3 class="heading">Login</h3>
+        <p>Login here using your username and password</p>
+        <form action="" class="bai6-form">
+            <i class="fa fa-user icon"></i>
+            <input type="text" id="bai6-username" class="bai6-input"><br>
+            <i class="fa fa-instagram icon"></i>
+            <input type="password" id="bai6-password"  class="bai6-input">
+        </form>
+        <div class="bai6-button">
+            <span class="bai6-2button">
+                Forgot 
+            </span>
+            <span class="bai6-2button">
+                Sign up
+            </span>
+        </div>
+    </div>
+</div>
+    <script src="th2.js"></script>
+</body>
+</html>
+
