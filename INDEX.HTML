@@ -1,5 +1,4 @@
 <!--bài1-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +9,10 @@
     body {
         font-family: Arial, sans-serif;
     }
-
     .container {
         width: 80%;
         margin: auto;
     }
-
     input[type="text"],
     textarea {
         width: 100%;
@@ -35,7 +32,7 @@
         cursor: pointer;
     }
 
-    button:hover {
+    button: hover {
         background-color: #0056b3;
     }
 
@@ -79,7 +76,7 @@
 
         // Clear input fields
         document.getElementById("name").value = "";
-        document.getElementById("content").value = "";
+        document.getElementById("Content").value = "";
         document.getElementById("time").value = getCurrentTime();
     });
 
@@ -94,11 +91,10 @@
         minutes = (minutes < 10 ? "0" : "") + minutes;
         seconds = (seconds < 10 ? "0" : "") + seconds;
 
-        var timeString = hours + ":" + minutes + ":" + seconds;
-        return timeString;
+        var time string = hours + ":" + minutes + ":" + seconds;
+        return time string;
     }
 </script>
-
 </body>
 </html>
 
@@ -110,7 +106,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/wedtoan/bt/style1.css">
-    <title>Hello World!</title>
+    <title>Quán ăn vặt ngon</title>
 
    <!-- The website stylesheet -->
     <link rel="stylesheet" href="/style.css" />
@@ -123,11 +119,11 @@
       <div class="letf-area">
       <h2>contact</h2>
       <ul class="box">
-         <li>577 Nguyễn thái Sơn </li>
-         <li>phường 5, Gò Vấp </li>
+         <li>12 Nguyễn Văn Bảo</li>
+         <li>phường 4, Gò Vấp </li>
          <li>thành phố Hồ Chí Minh</li>
-         <li>phanthuw1310@gmail.com</li>
-         <li> 0383574723</li>
+         <li>quananvatngon1210@gmail.com</li>
+         <li>012345678</li>
       </ul>
             </div>
 <ul class="right-area">
@@ -145,15 +141,12 @@
       </ul>
   </li>
   <li>
-    <h2> Bài đăng gần đây</h2>
+    <h2>Thông tin mới</h2>
     <ul>
       <div class="box">
-      <li><a href="#"> Món chay</a></li>
-      <li><a href="#"> Món mặn</a></li>
-      <li><a href="#"> Thức uống</a></li>
-      <li><a href="#"> Món ăn vặt </a></li>
-      <li><a href="#"> Món ăn sáng</a></li>
-      <li><a href="#"> Món ăn cho bé </a></li>
+      <li><a href="#">Thực đơn ăn vặt</a></li>
+      <li><a href="#">Thực đơn trà sữa</a></li>
+      <li><a href="#"></a>Món mới</li>
     </ul>
   </li>
   
@@ -182,7 +175,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiển thị giờ hiện hành</title>
+    <title>Giờ hiện hành</title>
     <style>
         /* CSS để căn giữa nội dung */
         body {
@@ -239,22 +232,22 @@
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <div class="name">Bài 6</div>
-<div class="bai6">
-    <div class="bai6-container">
+  <div class="name">Bài Log In</div>
+<div class="bailogin">
+    <div class="bailogin-container">
         <h3 class="heading">Login</h3>
         <p>Login here using your username and password</p>
-        <form action="" class="bai6-form">
+        <form action="" class="bailogin-form">
             <i class="fa fa-user icon"></i>
-            <input type="text" id="bai6-username" class="bai6-input"><br>
-            <i class="fa fa-instagram icon"></i>
-            <input type="password" id="bai6-password"  class="bai6-input">
+            <input type="text" id="bailogin-username" class="bailogin-input"><br>
+            <i class="fa fa-key icon"></i>
+            <input type="password" id="bailogin-password"  class="bailogin-input">
         </form>
-        <div class="bai6-button">
-            <span class="bai6-2button">
+        <div class="bailogin-button">
+            <span class="bailogin-2button">
                 Forgot 
             </span>
-            <span class="bai6-2button">
+            <span class="bailogin-2button">
                 Sign up
             </span>
         </div>
