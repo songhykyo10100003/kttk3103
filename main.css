@@ -113,7 +113,7 @@ h2{
 }
 
 <!--bài 4-->
-.bai6{
+.bailogin{
     width: 55%;
     height: 500px;
     background: rgb(2,0,36);
@@ -126,7 +126,7 @@ background: linear-gradient(115deg, rgba(2,0,36,1) 0%, rgba(121,9,94,1) 35%, rgb
 .heading {
     font-size: 25px;
 }
-.bai6-container{
+.bailogin-container{
     width: 400px;
     height: fit-content;
     background: rgb(2,0,36);
@@ -137,24 +137,24 @@ background: linear-gradient(115deg, rgba(2,0,36,1) 0%, rgba(121,9,94,1) 35%, rgb
     padding: 100px;
     border-radius: 10px;
 }
-.bai6-form i {
+.bailogin-form i{
     position: absolute;
 }
-.bai6-form >i{
+.bailogin-form >i{
     padding: 17px;
     min-width: 40px;
 }
-.bai6-input{
+.bailogin-input{
     padding: 10px;
     margin: 10px;
     text-align: center;
 }
 
-.bai6-2button{
+.bailogin-2button{
     padding: 10px;
     background-color: white;
     margin: 10px;
 }
-.bai6-button{
+.bailogin-button{
 margin: 10px;
 }
